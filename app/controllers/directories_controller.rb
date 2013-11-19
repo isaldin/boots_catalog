@@ -13,7 +13,7 @@ class DirectoriesController < ApplicationController
     @item = model_class.new(params[model_class.to_s.downcase.to_sym])
 
     if @item.save
-      redirect_to boots_path, :notice => 'Successfully created'
+      redirect_to model_class, :notice => 'Successfully created'
     else
       render :action => :new
     end

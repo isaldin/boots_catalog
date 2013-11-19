@@ -1,7 +1,7 @@
 <ul class="nav">
-  <li><%= link_to 'Каталог обуви', boots_path %></li>
-  <li><%= link_to 'Цвета', colours_path %></li>
-  <li><%= link_to 'Материалы верха', surfaces_path %></li>
-  <li><%= link_to 'Материалы подошвы', soles_path %></li>
-  <li><%= link_to 'Материалы стельки', insoles_path %></li>
+  <li class="<%= params[:controller] == 'boots' ? 'active' : '' %>"><%= link_to 'Каталог обуви', boots_path %></li>
+  <li class="<%= params[:controller] == 'colours' ? 'active' : '' %>"><%= link_to 'Цвета', colours_path %></li>
+  <li class="<%= params[:controller] == 'surfaces' ? 'active' : '' %>"><%= link_to 'Материалы верха', surfaces_path %></li>
+  <li class="<%= params[:controller] == 'soles' ? 'active' : '' %>"><%= link_to 'Материалы подошвы', soles_path %></li>
+  <li class="<%= params[:controller] == 'insoles' ? 'active' : '' %>"><%= link_to 'Материалы стельки', insoles_path %></li>
 </ul>
