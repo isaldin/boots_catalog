@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="span10 offset1">
+    <%= link_to 'New', new_boot_path, :class => 'btn btn-success' %>
+
+    <br>
+    <br>
+
+    <table class="table table-bordered">
+
+      <thead>
+      <tr>
+        <td>Наименование</td>
+        <td>Размер</td>
+        <td>Цвет</td>
+        <td>Материал подошвы</td>
+        <td>Материал стельки</td>
+        <td>Материал верха</td>
+        <td>[actions]</td>
+      </tr>
+      </thead>
+
+      <% @boots.each do |b| %>
+          <tr>
+            <td>
+              <%= b.name %>
+            </td>
+            <td>
+              <%= b.size %>
+            </td>
+            <td>
+              <%= b.colour.name %>
+            </td>
+            <td>
+              -
+            </td>
+            <td>
+              -
+            </td>
+            <td>
+              -
+            </td>
+            <td>
+              <%= link_to '[delete]', b, :method => :delete, :class => 'btn btn-small btn-danger' %>
+              <%= link_to '[edit]', edit_boot_path(b), :class => 'btn btn-small btn-primary' %>
+            </td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

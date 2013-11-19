@@ -1,0 +1,2 @@
+class SurfacesController < DirectoriesController
+end

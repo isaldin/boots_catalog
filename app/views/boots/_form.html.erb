@@ -1,0 +1,28 @@
+<%= form_for(@boot) do |f| %>
+
+    <% if @boot.errors.any? %>
+        <div class="alert alert-error">
+          <a class="close" data-dismiss="alert">&#215;</a>
+          <ul>
+            <% @boot.errors.full_messages.each do |msg| %>
+                <%= content_tag :li, msg, :id => "error_#{msg}" if msg.is_a?(String) %>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <br>
+
+    <%= f.label :size %>
+    <%= f.text_field :size %>
+
+    <br>
+
+    <%= f.label :colour_id %>
+    <%= f.collection_select :colour_id, Colour.all, :id, :name %>
+
+    <%= f.submit @boot.id ? 'Save': 'Create' %>
+<% end %>
