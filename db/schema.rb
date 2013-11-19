@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131119145937) do
+ActiveRecord::Schema.define(:version => 20131119162212) do
 
   create_table "boots", :force => true do |t|
     t.integer  "colour_id"
@@ -19,9 +19,23 @@ ActiveRecord::Schema.define(:version => 20131119145937) do
     t.datetime "updated_at", :null => false
     t.string   "name"
     t.integer  "size"
+    t.integer  "sole_id"
+    t.integer  "insole_id"
   end
 
   create_table "colours", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "insoles", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "soles", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
