@@ -4,6 +4,8 @@ BootsCatalog::Application.routes.draw do
   resources :boots
   resources :colours
   resources :surfaces
+  resources :soles
+  resources :insoles
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

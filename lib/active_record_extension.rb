@@ -3,14 +3,10 @@ require 'active_support/concern'
 module ActiveRecordExtension
   extend ActiveSupport::Concern
 
-  module ClassMethods
-    def foo
-      'bar'
+  included do
+    def model_class
+      controller_name.classify.constantize
     end
-  end
-
-  def model_class
-    @model_class ||= controller_name.classify.constantize
   end
 end
 

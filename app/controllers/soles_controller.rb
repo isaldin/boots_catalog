@@ -1,0 +1,2 @@
+class SolesController < DirectoriesController
+end

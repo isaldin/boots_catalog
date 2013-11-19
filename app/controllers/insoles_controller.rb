@@ -1,0 +1,2 @@
+class InsolesController < DirectoriesController
+end
