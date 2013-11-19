@@ -1,12 +1,14 @@
 class Boot < ActiveRecord::Base
-  attr_accessible :colour_id, :name, :size, :sole_id, :insole_id
+  attr_accessible :name, :size, :colour_id#, :sole_id, :insole_id, :surface_id
 
   validates :name, presence: true, uniqueness: true
   validates :colour_id, presence: true
+  #validates :sole_id, presence: true
+  #validates :insole_id, presence: true
+  #validates :surface_id, presence: true
   validates :size, presence: true, numericality: true
 
-  belongs_to :colour
-  belongs_to :surface
-  belongs_to :sole
-  belongs_to :insole
+  def colour
+    Colour.find(self.colour_id)
+  end
 end

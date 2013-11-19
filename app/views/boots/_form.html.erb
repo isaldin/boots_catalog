@@ -24,5 +24,7 @@
     <%= f.label :colour_id %>
     <%= f.collection_select :colour_id, Colour.all, :id, :name %>
 
+    <br>
+
     <%= f.submit @boot.id ? 'Save': 'Create' %>
 <% end %>

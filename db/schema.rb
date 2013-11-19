@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131119162212) do
+ActiveRecord::Schema.define(:version => 20131119170513) do
 
   create_table "boots", :force => true do |t|
     t.integer  "colour_id"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20131119162212) do
     t.integer  "size"
     t.integer  "sole_id"
     t.integer  "insole_id"
+    t.integer  "surface_id"
   end
 
   create_table "colours", :force => true do |t|
