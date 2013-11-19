@@ -26,5 +26,20 @@
 
     <br>
 
+    <%= f.label :surface_id %>
+    <%= f.collection_select :surface_id, Surface.all, :id, :name %>
+
+    <br>
+
+    <%= f.label :sole_id %>
+    <%= f.collection_select :sole_id, Sole.all, :id, :name %>
+
+    <br>
+
+    <%= f.label :insole_id %>
+    <%= f.collection_select :insole_id, Insole.all, :id, :name %>
+
+    <br>
+
     <%= f.submit @boot.id ? 'Save': 'Create' %>
 <% end %>
