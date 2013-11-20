@@ -7,9 +7,9 @@ class Boot < ActiveRecord::Base
   belongs_to :surface
 
   validates :name, presence: true, uniqueness: true
-  validates :colour_id, presence: true
-  validates :surface_id, presence: true
-  validates :sole_id, presence: true
-  validates :insole_id, presence: true
+  validates :colour, presence: true
+  validates :surface, presence: true
+  validates :sole, presence: true
+  validates :insole, presence: true
   validates :size, presence: true, numericality: true
 end
